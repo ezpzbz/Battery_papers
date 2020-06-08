@@ -1,7 +1,8 @@
 name: Hourly tweet
 on:
+  push:
   schedule:
-    - cron:  '05 * * * *'
+    - cron:  '0 8-20/4 * * *'
 jobs:
   daily_update:
     runs-on: ubuntu-latest
