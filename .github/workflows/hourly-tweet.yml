@@ -32,7 +32,7 @@ jobs:
           CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
           ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
           ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
-        run: python ./PapersBot/papersbot.py
+        run: python3 ./PapersBot/papersbot.py
       - name: Commit changes to posted list
         run: |
           git config --local user.email "action@github.com"
