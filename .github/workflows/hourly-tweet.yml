@@ -14,7 +14,7 @@ jobs:
           path: 'PapersBot'
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.7'
+          python-version: '3.6'
       - name: Check python version
         run: python -V
       - name: Install dependencies
@@ -32,7 +32,7 @@ jobs:
           CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
           ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
           ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
-        run: python3 ./PapersBot/papersbot.py
+        run: python ./PapersBot/papersbot.py
       - name: Commit changes to posted list
         run: |
           git config --local user.email "action@github.com"
