@@ -7,14 +7,14 @@ jobs:
   daily_update:
     runs-on: ubuntu-latest
     steps:
-      #- uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - uses: actions/checkout@v2
         with:
           repository: 'pzarabadip/PapersBot'
           path: 'PapersBot'
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.6'
+          python-version: '3.7'
       - name: Check python version
         run: python -V
       - name: Install dependencies
