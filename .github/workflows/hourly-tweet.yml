@@ -37,6 +37,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Battery Papers"
-	  git config pull.rebase false
+	  git config --local pull.rebase false
 	  git pull
           git diff --quiet --exit-code posted.dat || (git commit posted.dat -m 'Papers were posted' && git push)
