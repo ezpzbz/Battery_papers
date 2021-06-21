@@ -37,5 +37,5 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Battery Papers"
-	  git pull
+          git pull
           git diff --quiet --exit-code posted.dat || (git commit posted.dat -m 'Papers were posted' && git push)
